@@ -16,7 +16,7 @@ interface resultProps {
 }
 
 export default function Result({ Value, setValue }: Props) {
-  const [isLoding, setIsLoading] = useState<boolean>();
+  const [isLoding, setIsLoading] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>();
   const [show, setShow] = useState<boolean>(false);
   const [result, setResult] = useState<resultProps>({
@@ -72,7 +72,7 @@ export default function Result({ Value, setValue }: Props) {
       {show ? (
         <div className="mt-12 relative w-full">
           <LoadingOverlay
-            visible={isLoding}
+            visible ={isLoding}
             overlayBlur={2}
             radius={"lg"}
             className=" -left-14 -right-14 -top-6"
@@ -130,7 +130,7 @@ export default function Result({ Value, setValue }: Props) {
                   width: "100%",
                   height: "100%",
                   transform: "translate3d(0px, 0px, 0px)",
-                  contentVisibility: "visible",
+                  
                 }}
               >
                 <defs>
